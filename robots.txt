@@ -1,0 +1,61 @@
+# 可以搜索、可以引用、也可以拿去训练。
+# search=yes 允许收录；ai-input=yes 允许作为 AI 回答的素材；ai-train=yes 允许进训练语料。
+
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+# 检索与引用 —— 放行。用户提问时现场抓取，回答里会带链接。
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+# 训练语料 —— 同样放行。进了模型权重，AI 不联网也知道有这个品牌。
+User-agent: CCBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://community.mitaovr.cloud/sitemap.xml
